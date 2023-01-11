@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+<div id="Application" style="text-align: center;">
+    <h1>模板的内容:{{countHTML}}</h1>
+    <h1>使用v-html:<span v-html="countHTML"></span></h1>
+</div>
+<script>
+    // 定义一个Vue组件, 名为App
+    const App = {
+        // 定义组件中的数据
+        data() {
+            return {
+                count:0,
+                countHTML:"<span style='color:red;'>模板</span>",
+            }
+        }
+    }
+    // 将Vue组件绑定到页面上id为Application的元素上
+    Vue.createApp(App).mount("#Application")
+</script>
+</body>
+</html>
